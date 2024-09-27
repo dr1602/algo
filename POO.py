@@ -22,3 +22,8 @@ if __name__ == '__main__':
     
     mi_coche = Coche('Toyota', 'Corola', 'Gasolina')
     mi_coche.mostrar_info()
+    
+'''
+Marca: Toyota, Modelo: Corola
+Combustible: Gasolina
+'''
