@@ -1,24 +1,15 @@
-class Vehiculo:
-    def __init__(self, marca, modelo):
-        self.marca = marca
-        self.modelo = modelo
-        
-    def mostrar_info(self):
-        print(f'Marca: {self.marca}, Modelo: {self.modelo}')
-        
-# Subclase que hereda de Vehiculo
+import requests
 
-class Coche(Vehiculo):
-    def __init__(self, marca, modelo, tipo_combustible):
-        super().__init__(marca, modelo)
-        self.tipo_combustible = tipo_combustible
-        
-    def mostrar_info(self):
-        super().mostrar_info()
-        print(f'Combustible: {self.tipo_combustible}')
-        
-if __name__ == '__main__':
-    from POO import Vehiculo, Coche
-    
-    mi_coche = Coche('Toyota', 'Corola', 'Gasolina')
-    mi_coche.mostrar_info()
+# URL de la API con el endpoint y el parametro de ciudad
+api_url = 'http://api.openweathermap.org/data/2.5/weather?q=Mexico&appid=tu_api_key'
+
+# Realizar la solicitud GET
+response = requests.get(api_url)
+
+# Verificar si la respuesta es existosa
+if response.status_code == 200:
+    # Parsear las respuestas en formato JSON
+    data = response.json()
+    print(f"El clima actual en Mexico: {data['weather'][0]['description']}")
+else:
+    print('Error al obtener los datos del clima')
