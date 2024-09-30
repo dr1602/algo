@@ -1,15 +1,21 @@
-# Examples of algorithms in Python, explained using both bottom-up and top-down approaches
+# Factorial
 
-# Fibonacci Top-down (Recursive)
+# Bottom-up (iterative)
 
-def fibonacci_top_down(n, memo={}):
-    if n in memo:
-        return memo[n]
-    if n <= 1:
-        return n
-    memo[n] = fibonacci_top_down(n - 1, memo) + fibonacci_top_down(n - 2, memo)
-    print(f'La iteracion va aqui {memo[n]}')
-    return memo[n]
+def factorial_top_down(n):
+    if n == 0:
+        return 1
+    print(f'vamos aqui {n}')
+    return n * factorial_top_down(n - 1)
 
-test = fibonacci_top_down(6)
-print(test)
+'''
+Explanation:
+1. Recursively calculates the factorial by multiplying n with the factorial of n - 1
+2. It goes from top to bottom the number you input, with the relevant calculations
+from the function
+
+'''
+
+if __name__ == '__main__':
+    test = factorial_top_down(5)
+    print(test)
