@@ -51,4 +51,21 @@ c. combine: merge the sorted halves into a single sorted array.
 
 Dynamic programming is an optimization technique that avoids redundant calculations by sorting intermeidate results. Memoization is a specific implementation of dynamic programming where results are sorted in a chache.
 
-[Example]()
+[Example](fibonacci.py)
+
+Explanation:
+
+a. The moemo ditionary stores previously calculated Fibonacci numbers
+b. If n is already in the memo, the result is returned directly.
+c. Otherwise, the Fibonacci number is calculated recursively and sotred in the memo for future use.
+
+## Greedy Algorithms
+
+Greedy algorithms make locally optimal choices at each step, hopin to reach a globally optimal solution.
+
+[Example](greedy.py)
+
+Explanation:
+a. Sorts the coins in descending order
+b. Greedily selects the largest coin that is less than or equal to the remaining amount.
+c. Repetas until the amount is zero

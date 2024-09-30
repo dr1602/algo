@@ -16,3 +16,4 @@ if __name__ == '__main__':
     
     test = gredy_coin_change(coins, amount)
     print(test)
+    # [10, 1]
