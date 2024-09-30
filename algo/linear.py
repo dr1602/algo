@@ -15,3 +15,5 @@ if __name__ == '__main__':
         print(f'Element is present at index: {str(result)}')
     else: 
         print(f'Element is not present in the array')
+        
+    # Element is present at index: 3
