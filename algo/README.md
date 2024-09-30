@@ -69,3 +69,15 @@ Explanation:
 a. Sorts the coins in descending order
 b. Greedily selects the largest coin that is less than or equal to the remaining amount.
 c. Repetas until the amount is zero
+
+## Dijkstra's Algorithm
+
+Dijkstra's Algorithm is used to find the sortest path between nodes in a graph where the edges have non-negative weights
+
+[Example]()
+
+Explanation:
+a. USes a priority queue (heap) to efficiently explore the graph.
+b. Interatively updates the distances to neighboiring nodes.
+c. Return the sortest distances from the start node to all other nodes.
+

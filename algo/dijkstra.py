@@ -52,3 +52,14 @@ graph3 = {
 
 print("\nEjemplo 3:")
 print(dijkstra(graph3, 'A'))
+
+'''
+Ejemplo 1:
+{'A': 0, 'B': 3, 'C': 2, 'D': 6, 'E': 4}
+
+Ejemplo 2:
+{'S': 0, 'A': 3, 'B': 2, 'C': 8, 'D': 10, 'E': 13}
+
+Ejemplo 3:
+{'A': 0, 'B': 3, 'C': 2, 'D': 6, 'E': 8}
+'''
