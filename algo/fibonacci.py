@@ -10,3 +10,4 @@ def fibonacci(n, memo={}):
 if __name__ == '__main__':
     test = fibonacci(5)
     print(test)
+    # 5

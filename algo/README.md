@@ -38,4 +38,17 @@ b. Time complexity: O(log n) in the worst case
 
 # Divide and conquer
 
-Divide and conc
+Divide and conquer algorithms break down a problem into smaller subproblems, solve the subproblems recursively, and then comibne the solutions to solve the original problem.
+
+## Merge Sort
+
+We already saw it. Here's a breakdown of this divide and conquer approach:
+a. divide: divide the array into two halves
+b. conquer: recursively sort each half.
+c. combine: merge the sorted halves into a single sorted array.
+
+## Dynamic Programming / Memoization
+
+Dynamic programming is an optimization technique that avoids redundant calculations by sorting intermeidate results. Memoization is a specific implementation of dynamic programming where results are sorted in a chache.
+
+[Example]()
