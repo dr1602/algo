@@ -27,4 +27,15 @@ Searching algorithms find the position of a specific element in a list.
 a. Explanation: Iterates through the list sequentially until the element is found or the end is reached
 b. Time complexity: O(n) in the worst case
 
-[Example]()
+[Example](linear.py)
+
+### Binary Search (for sorted lists)
+
+a. Explanation: Divides the list in half repeatedly until the element is found or the search space is empy.
+b. Time complexity: O(log n) in the worst case
+
+[Example](binary_search.py)
+
+# Divide and conquer
+
+Divide and conc

@@ -25,3 +25,10 @@ if __name__ == '__main__':
         print(f'Element is present at index: {str(result)}')
     else:
         print("Element is not present in array")
+        
+'''
+est es mid: 2
+est es high cuando mid mayor a x: 1
+est es mid: 0
+Element is present at index: 0
+'''
