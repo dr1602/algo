@@ -1,21 +1,30 @@
-# Factorial
+# Top - down (recursive with memoization)
 
-# Bottom-up (iterative)
-
-def factorial_top_down(n):
-    if n == 0:
-        return 1
-    print(f'vamos aqui {n}')
-    return n * factorial_top_down(n - 1)
-
+def min_coin_change_top_down(coins, amount, memo={}):
+    if amount == 0:
+        return 0
+    if amount in memo:
+        return memo[amount]
+    min_coins = float('inf')
+    for coin in coins:
+        if amount >= coin:
+            min_coins = min(min_coins, min_coin_change_top_down(coins, amount - coin, memo) + 1)
+    memo[amount] = min_coins
+    return min_coins
+    
 '''
 Explanation:
-1. Recursively calculates the factorial by multiplying n with the factorial of n - 1
-2. It goes from top to bottom the number you input, with the relevant calculations
-from the function
+1. Uses memoization to avoid reduntant calculations
+2. Recursively calculates the minimum number of coins for each amount.
+
 
 '''
 
 if __name__ == '__main__':
-    test = factorial_top_down(5)
+    
+    monedas = [1, 5, 10, 25] # Denominaciones de monedas disponibles
+    cantidad = 12 # Cantidad para la que queremos encontrar el cambio minimo
+    
+    test = min_coin_change_top_down(monedas, cantidad)
     print(test)
+    print(f'El numero minimo de monedas para {cantidad} es: {test}')
