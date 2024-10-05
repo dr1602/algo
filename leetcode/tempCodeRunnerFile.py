@@ -1,42 +1,39 @@
-def min_window_substring(s, t):
-    char_count = {}
-    for char in t:
-        # print(f'char: {char}')
-        char_count[char] = char_count.get(char, 0) + 1
-        # print(f'char_count[char]: {char_count[char]} ')
-    
-    required = len(char_count)
-    formed = 0
-    start = 0
-    end = 0
-    min_length = float('inf')
-    window_size = float('inf')
-    
-    while end < len(s):
-        char = s[end]
-        if char in char_count:
-            char_count[char] -= 1
-            if char_count[char] == 0:
-                formed += 1
-                
-        while start <= end and formed == required:
-            char = s[start]
-            if char in char_count:
-                if char_count[char] == 0:
-                    formed -= 1
-                char_count[char] += 1
-            if end - start + 1 < window_size:
-                window_size = end - start + 1
-                min_window = s[start:end+1]
-                
-            start += 1
-            
-        end += 1
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        if not s:
+            return ''
         
-    return min_window if window_size != float('inf') else ''
-
+        # Initialize variable to keep track of the longest palindrome
+        longest_start = 0
+        longest_length = 1
+        
+        # Function to expand around center
+        def expand_around_center(left: int, right: int) -> None:
+            nonlocal longest_start, longest_length
+            
+            # Expand while within bounds an d characters match
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                current_length = right - left + 1
+                if current_length > longest_length:
+                    longest_start = left
+                    longest_length = current_length
+                left -= 1
+                right += 1
+                
+        # Check again each position as a potential center
+        for i in range(len(s)):
+            # Odd length palindromes
+            expand_around_center(i, i)
+            # Even length palindromes
+            if i < len(s) - 1:
+                expand_around_center(i, i + 1)
+                    
+        return s[longest_start:longest_start + longest_length]
+        
 if __name__ == '__main__':
-    s = "ADOBECODEBANC"
-    t = "ABC"
-    result = min_window_substring(s, t)
-    print(result)  # Output: "BANC"
+    print(Solution().longestPalindrome('babad'))
+    print(Solution().longestPalindrome('cbbd'))
+    print(Solution().longestPalindrome('a'))
+    print(Solution().longestPalindrome('ac'))
+    print(Solution().longestPalindrome('racecar'))
+    print(Solution().longestPalindrome('aabbaa'))
