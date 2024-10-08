@@ -35,6 +35,39 @@
 
 **Space Complexity**: Stable
 
+``` py
+def bubble_sort(arr):
+    n = len(arr)
+    iterations = []
+
+    for i in range(n):
+        # Flag to optimize the algorithm
+        swapped = False
+
+        # Create a copy of the current state
+        current_state = arr.copy()
+        iterations.append(f'Iteration {i + 1}: {current_state}')
+
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            # Swap them if they are in wrong order
+            if arr[j] > arr[j + 1]:
+                # swap them if they are in wrong order
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+
+                # Record the swap
+                iterations.append(f'Swap: {arr[j]} and {arr[j + 1]} -> {arr}')
+            
+            # If no swapping ocurred, array is already sorted
+
+    return arr, iterations
+
+# Example usage
+numbers = [64, 34, 25, 12, 22, 11, 90]
+
+```
+
 ### Selection Sort
 
 **How it works**: Finds the minimum element in the unsorted portion and places it at the beginning.
