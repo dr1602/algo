@@ -27,13 +27,39 @@ Could you implement a solution that runs in O(n) time complexity and O(1) space 
 
     
 '''
-
+'''
 class Solution(object):
     def increasingTriplet(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
+
+'''
+
+# Master answer
+
+def increasingTriplet(nums):
+    # Initialize first and second with infinity
+    first = float('inf')
+    second = float('inf')
+
+    # Iterate through the array
+    for num in nums:
+        if num <= first:
+            # Update first if num is smaller than or equal to first
+            first = num
+
+        elif num <= second:
+            # Update second if num is larger than first but smaller or equal to second
+            second = num
+
+        else:
+            # If num is greater than both first and second, we found a triple
+            return True
+        
+    # If no triplet was found
+    return False
 
 # Proposed solution
 
@@ -99,6 +125,9 @@ def increasingTriplet(nums):
 
 '''
 
+### it only pass 68 of 84 tests
+
+'''
 def increasingTriplet(nums):
     left = 0
     right = 1
@@ -126,6 +155,7 @@ result_3 = increasingTriplet(nums_3)
 print(result_1)
 print(result_2)
 print(result_3)
+'''
 
 '''
 def increasingTriplet(nums):
