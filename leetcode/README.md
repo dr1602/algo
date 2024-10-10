@@ -49,6 +49,8 @@
 
 **Space Complexity**: Unstable
 
+[Example](/algorithms/selection_sort.py)
+
 ### Insertion Sort
 
 **How it works**: Builds final array one item at a time, by constantly inserting a new element into a sorted portion.
