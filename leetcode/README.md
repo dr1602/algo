@@ -77,6 +77,8 @@
 
 **Space Complexity**: Unstable
 
+[Example](/leetcode/algorithms/quick_sort.py)
+
 ### Merge Sort:
 
 **How it works**: Divides array into two havles, sorts them and then merges the sorted halves.
