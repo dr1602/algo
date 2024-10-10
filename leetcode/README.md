@@ -35,7 +35,7 @@
 
 **Space Complexity**: Stablew
 
-[Example](/algorithms/bubble_sort.py)   
+[Example](/leetcode/algorithms/bubble_sort.py)   
 
 ### Selection Sort
 
@@ -49,7 +49,7 @@
 
 **Space Complexity**: Unstable
 
-[Example](/algorithms/selection_sort.py)
+[Example](/leetcode/algorithms/selection_sort.py)
 
 ### Insertion Sort
 
@@ -62,6 +62,8 @@
 **Best for**: Small datasets, nearly sorted arrays.
 
 **Space Complexity**: Stable
+
+[Example](/leetcode/algorithms/insertion_sort.py)
 
 ### Quick Sort:
 
