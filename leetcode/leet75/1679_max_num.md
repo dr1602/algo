@@ -47,7 +47,7 @@ as for what the second example says, it seem that we move the pointers starting 
 it is not specified if the array is arranged.
 
 
-```md
+```py
 
 def maxOperations(nums, k):
     left = 0
