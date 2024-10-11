@@ -73,7 +73,7 @@ and we can continue this until we get the answer.
 
 [1,8,6,2,5,4,8,3,7]
 
-```md
+```py
 
 def maxArea(height):
 
