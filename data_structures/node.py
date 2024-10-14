@@ -15,6 +15,13 @@ if __name__ == '__main__':
     print(node_2.data)
     print(node_2.next)
     print(node_3.next)
+
+    '''
+    A
+    None
+    <node.Node object at 0x7f3355554da0>
+    A
+    '''
     
     # para ver el dato del siguiente nodo
     print(node_3.next.data)

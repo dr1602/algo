@@ -47,3 +47,34 @@ if __name__ == '__main__':
     matrix_two.random_number_fill()
     
     print(matrix_two)
+
+'''
+None None None 
+None None None 
+None None None 
+
+None None None 
+None None None 
+None None None 
+
+None None None 
+None None None 
+None None None 
+
+
+8 5 7 
+0 2 9 
+5 3 7 
+
+10 10 3 
+3 10 2 
+9 7 5 
+
+7 0 5 
+1 8 2 
+7 2 10 
+
+3 2 1 
+9 6 8 
+10 9 10 
+'''
