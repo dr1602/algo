@@ -13,19 +13,9 @@ def find_max_average(nums, k):
     Returns:
         The maximum average value.
     """
-
-    if len(nums) < k:
-        return 0 # Handle edge case: k is greater than the array length
-
-    # Calculate the sum of the first k elements
-    window_sum = float(sum(nums[:k]))
-    max_average = float(window_sum / k)
-    
-    # Slide the window and update the sum and average
-    for i in range(k, len(nums)):
-        window_sum += nums[i] - nums[i - k]
-        average = float(window_sum / k)
-        max_average = max(max_average, average)
-
-    return max_average
+    M = d = 0
+    for i in range(len(nums) - k):
+        d = d + nums[i + k] - nums[i]
+        if d > M: M = d
+    return( float(sum(nums[:k])+M)/k)
 
