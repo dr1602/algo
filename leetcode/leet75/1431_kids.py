@@ -45,10 +45,18 @@ if __name__ == '__main__':
 
 '''
 candies = [2,3,5,1,3]
+extraCandies = 3
 
-for i, j in candies:
-    print(i)
-    print(j)
+# for i, j in candies:
+#     print(i)
+#     print(j)
+
+maxCandies = max(candies)
+
+for index, value in enumerate(candies):
+    candies[index] = (maxCandies - value) <= extraCandies
+
+print(candies)
 '''
 
 '''
